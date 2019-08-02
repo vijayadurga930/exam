@@ -1,0 +1,43 @@
+case 2:{
+	do {
+	System.out.println("Enter Product Id to delete");
+	int productId=scanner.nextInt();
+	boolean status=service.delete(productId);
+	if(status=true)
+	{
+		System.out.println( productId+ "  Deleted Successfully......");
+		deleteFlag=true;
+	}else {
+		System.out.println("Id not available...");
+		
+	}
+-------------------------------------------------------------------------------------
+public boolean delete(int productId) {
+	
+		boolean status=dao.deleteCustomer(productId);
+		if(status=true) {
+			
+			status=true;
+		}
+		
+		
+		return status;
+	}
+	
+}
+-----------------------------------------------------------------------------------
+public boolean deleteCustomer(int productId) {
+	
+	Product product = map.remove(productId);
+	if(map.get(productId)!=null)
+	{
+		
+		System.out.println(map);
+		status=true;
+	}
+	else {
+		
+		status=false;
+	}
+	    return status;
+}
