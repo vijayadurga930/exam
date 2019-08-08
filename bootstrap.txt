@@ -1,0 +1,7 @@
+bootsrap:
+----------------------------------------------------------
+npm install -g json-server
+
+running:
+------------------------------
+json -server --watch db.json
